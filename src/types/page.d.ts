@@ -5,3 +5,5 @@ declare interface PageConfig {
   requiresAuth?: boolean
   keepAlive?: boolean
 }
+
+export default PageConfig

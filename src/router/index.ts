@@ -78,7 +78,10 @@ const router = createRouter({
       const bIsHome = b.meta?.isHome ?? false
       return aIsHome ? -1 : bIsHome ? 1 : 0
     })
-    .concat([{ path: '/index', redirect: '/' }]),
+    .concat([
+      { path: '/index', redirect: '/' },
+      { path: '/index.html', redirect: '/' },
+    ]),
 })
 
 // 全局标题设置
