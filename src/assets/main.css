@@ -14,4 +14,10 @@ a,
 * {
   box-sizing: border-box;
   font-family: 'Wevas', sans-serif;
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
 }
