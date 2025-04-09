@@ -11,7 +11,6 @@ import PageContent from '@/components/index/indexSwiperThreePage/pageContent.vue
 const pageContentRef = ref<InstanceType<typeof PageContent> | null>(null)
 const pageTitleRef = ref<InstanceType<typeof PageTitle> | null>(null)
 const star = () => {
-  console.log(3)
   pageContentRef.value?.star()
   pageTitleRef.value?.star()
 }

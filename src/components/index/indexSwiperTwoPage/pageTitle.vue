@@ -15,7 +15,6 @@ import { gsap } from 'gsap'
 const titleRef = ref<HTMLElement>()
 const lineRef = ref<HTMLElement>()
 const star = () => {
-  console.log('标题组件 star 方法被调用')
   if (titleRef.value) {
     gsap.fromTo(
       titleRef.value,
@@ -38,7 +37,6 @@ const star = () => {
   }
 }
 
-// 导出 star 方法
 defineExpose({
   star,
 })

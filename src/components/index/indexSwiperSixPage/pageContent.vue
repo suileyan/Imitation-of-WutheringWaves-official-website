@@ -87,7 +87,6 @@ const images = [
 ]
 
 const star = () => {
-  console.log(3)
   if (swiperContainer.value) {
     gsap.fromTo(
       swiperContainer.value,

@@ -67,14 +67,11 @@ const components = [
   IndexSwiperSixPage,
 ]
 
-// Initialize pageRefs array with null values
 for (let i = 0; i < components.length; i++) {
   pageRefs.value.push(null)
 }
 
 const onSlideChange = (swiper: SwiperType) => {
-  console.log('Current slide index:', swiper.realIndex)
-
   const currentComponent = pageRefs.value[swiper.realIndex]
   if (currentComponent) {
     currentComponent.star()

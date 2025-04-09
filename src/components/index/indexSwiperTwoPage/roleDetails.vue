@@ -108,9 +108,7 @@ const introduceRef = ref()
 const videoRoleBoxRef = ref()
 const isLoaded = ref(false)
 
-// 添加 star 方法
 const star = () => {
-  console.log('角色详情组件 star 方法被调用')
   if (detailsRef.value) {
     gsap.fromTo(
       detailsRef.value,
@@ -140,7 +138,7 @@ const star = () => {
     )
   }
 }
-// 导出 star 方法
+
 defineExpose({
   star,
 })

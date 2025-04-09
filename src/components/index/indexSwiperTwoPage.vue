@@ -61,11 +61,11 @@ const currentAudio = ref<HTMLAudioElement | null>(null)
 const maxVisible = 4
 const isTransitioning = ref(false)
 const campRef = ref()
-// 添加组件引用
+
 const roleDetailsRef = ref()
 const paginationRef = ref()
 const titleRef = ref()
-// 添加 star 方法
+
 const star = () => {
   roleDetailsRef.value?.star()
   paginationRef.value?.star()
@@ -79,23 +79,16 @@ const star = () => {
   }
 }
 
-// 导出 star 方法
 defineExpose({
   star,
 })
 
 onMounted(() => {
-  console.log('roleDetailsRef:', roleDetailsRef.value)
   isInitialized.value = true
 })
 
-// 音频播放
 const playdub = (audioPath: string) => {
-  console.log('播放音频:', audioPath)
-
-  // 停止当前播放的音频
   if (currentAudio.value) {
-    console.log('停止当前音频')
     currentAudio.value.pause()
     currentAudio.value.currentTime = 0
     currentAudio.value = null
@@ -106,34 +99,23 @@ const playdub = (audioPath: string) => {
     return
   }
 
-  // 创建新的音频实例
   currentAudio.value = new Audio(audioPath)
 
-  // 添加加载事件监听
-  currentAudio.value.addEventListener('loadeddata', () => {
-    console.log('音频加载完成:', audioPath)
-  })
-
-  // 添加错误处理
   currentAudio.value.addEventListener('error', (e) => {
     console.error('音频加载失败:', e)
     currentAudio.value = null
   })
 
-  // 播放音频
   currentAudio.value.play().catch((err) => {
     console.error('音频播放失败:', err)
     currentAudio.value = null
   })
 
-  // 播放结束后清理
   currentAudio.value.addEventListener('ended', () => {
-    console.log('音频播放结束')
     currentAudio.value = null
   })
 }
 
-// 页面切换时停止音频
 const stopAudio = () => {
   if (currentAudio.value) {
     currentAudio.value.pause()
@@ -142,17 +124,14 @@ const stopAudio = () => {
   }
 }
 
-// 更新页面切换函数
 const goToPage = (index: number) => {
-  if (index === currentPage.value) return // 如果目标页面与当前页面相同，则不进行切换
+  if (index === currentPage.value) return
   isTransitioning.value = true
   setTimeout(() => {
     currentPage.value = index
     isTransitioning.value = false
   }, 500)
-  console.log('切换', index)
 
-  // 使用 setTimeout 延迟停止音频
   setTimeout(() => {
     stopAudio()
   }, 50)
@@ -161,14 +140,13 @@ const goToPage = (index: number) => {
 const prevPage = () => {
   if (currentPage.value > 0) {
     const newIndex = currentPage.value - 1
-    if (newIndex === currentPage.value) return // 如果目标页面与当前页面相同，则不进行切换
+    if (newIndex === currentPage.value) return
     isTransitioning.value = true
     setTimeout(() => {
       currentPage.value = newIndex
       isTransitioning.value = false
     }, 500)
 
-    // 使用 setTimeout 延迟停止音频
     setTimeout(() => {
       stopAudio()
     }, 50)
@@ -178,14 +156,13 @@ const prevPage = () => {
 const nextPage = () => {
   if (currentPage.value < totalPages.length - 1) {
     const newIndex = currentPage.value + 1
-    if (newIndex === currentPage.value) return // 如果目标页面与当前页面相同，则不进行切换
+    if (newIndex === currentPage.value) return
     isTransitioning.value = true
     setTimeout(() => {
       currentPage.value = newIndex
       isTransitioning.value = false
     }, 500)
 
-    // 使用 setTimeout 延迟停止音频
     setTimeout(() => {
       stopAudio()
     }, 50)

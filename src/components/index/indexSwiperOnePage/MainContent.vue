@@ -26,7 +26,6 @@ const playTheCgVideo = () => {
 }
 
 const star = () => {
-  console.log('MainContent')
   if (DownloadSectionRef.value?.star) {
     DownloadSectionRef.value.star()
   }

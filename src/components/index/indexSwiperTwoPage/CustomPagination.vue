@@ -100,7 +100,6 @@ const goToPage = (index: number) => {
   emit('goToPage', index)
 }
 
-// 分页器样式计算
 const paginationTranslateStyle = computed(() => {
   const itemHeight = 12
   const totalItems = props.totalPages.length
@@ -110,9 +109,7 @@ const paginationTranslateStyle = computed(() => {
   return { transform: `translateY(-${offset * itemHeight}%)` }
 })
 
-// 添加 star 方法
 const star = () => {
-  console.log('分页组件 star 方法被调用')
   if (paginationRef.value) {
     gsap.fromTo(
       paginationRef.value,
@@ -122,7 +119,6 @@ const star = () => {
   }
 }
 
-// 导出 star 方法
 defineExpose({
   star,
 })

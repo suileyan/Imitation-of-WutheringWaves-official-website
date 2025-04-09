@@ -29,7 +29,7 @@ const VideoController = (control: string) => {
     CgVideo.value.currentTime = 0
   }
 }
-//GSAP
+
 const showVideo = (is: string = 'else') => {
   if (!Mask.value) return
   if (is === 'show') gsap.to(Mask.value, { duration: 0.5, zIndex: 11, opacity: 1 })

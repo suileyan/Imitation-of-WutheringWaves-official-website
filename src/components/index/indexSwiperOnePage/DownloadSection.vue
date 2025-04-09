@@ -48,7 +48,6 @@ const isCloudQrcodeToShow = (isShow: boolean, dom: HTMLElement) => {
 }
 
 const star = () => {
-  console.log('downloadSection')
   gsap.fromTo(
     OrderBoxRef.value,
     { opacity: 0, translateY: '10%' },

@@ -22,7 +22,6 @@ const logoRef = ref()
 const topBarRef = ref()
 
 const star = () => {
-  console.log('TopBar')
   gsap.fromTo(
     [logoRef.value, topBarRef.value],
     { translateY: '-100%' },
