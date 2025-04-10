@@ -81,6 +81,7 @@ const router = createRouter({
     .concat([
       { path: '/index', redirect: '/' },
       { path: '/index.html', redirect: '/' },
+      { path: '/Imitation-of-WutheringWaves-official-website/', redirect: '/' },
     ]),
 })
 
