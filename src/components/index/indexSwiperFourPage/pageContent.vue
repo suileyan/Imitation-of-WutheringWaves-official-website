@@ -14,8 +14,7 @@
 import videoPlayer from '@/components/index/indexSwiperTwoPage/videoPlayer.vue'
 import { ref, defineExpose } from 'vue'
 import { gsap } from 'gsap'
-const fldlsVideoSrc =
-  'https://suileyan.oss-cn-guangzhou.aliyuncs.com/fuludelisi.mp4?Expires=1744300296&OSSAccessKeyId=TMP.3KokKtgt4Nhz7aQU9Qx4cgB9FWriF6fZndJzJvoRnCiGNhfdrLcw8saXthPPBwhh719mX5tBVSNEEeMHYkqeW59dSc3B4x&Signature=CW8%2BdpwuKBI7M6FXGQusxmTgE88%3D'
+const fldlsVideoSrc = 'https://suileyan.oss-cn-guangzhou.aliyuncs.com/fuludelisi.mp4'
 const bgRef = ref()
 const textRef = ref()
 const videoRef = ref()

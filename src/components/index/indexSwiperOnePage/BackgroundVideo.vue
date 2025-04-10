@@ -8,8 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-const onePageBgMp4 =
-  'https://suileyan.oss-cn-guangzhou.aliyuncs.com/bg-video.mp4?Expires=1744300333&OSSAccessKeyId=TMP.3KokKtgt4Nhz7aQU9Qx4cgB9FWriF6fZndJzJvoRnCiGNhfdrLcw8saXthPPBwhh719mX5tBVSNEEeMHYkqeW59dSc3B4x&Signature=ezuZx2BWHeXoqFD6gBnVXSJGb8w%3D'
+const onePageBgMp4 = 'https://suileyan.oss-cn-guangzhou.aliyuncs.com/bg-video.mp4'
 const onePageBgposter = new URL('@/assets/images/indexPage1/bg-poster.png', import.meta.url).href
 </script>
 
