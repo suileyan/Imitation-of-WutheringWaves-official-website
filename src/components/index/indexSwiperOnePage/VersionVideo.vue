@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 import { ref, defineExpose } from 'vue'
 import { gsap } from 'gsap'
-const CgMP4 = '/assets/videos/cg_zh.mp4'
+const CgMP4 = '/videos/cg_zh.mp4'
 const CgVideo = ref<HTMLVideoElement | null>(null)
 const Mask = ref<HTMLVideoElement | null>(null)
 const VideoController = (control: string) => {

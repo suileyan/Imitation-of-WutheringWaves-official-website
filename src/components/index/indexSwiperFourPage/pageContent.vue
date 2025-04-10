@@ -14,7 +14,7 @@
 import videoPlayer from '@/components/index/indexSwiperTwoPage/videoPlayer.vue'
 import { ref, defineExpose } from 'vue'
 import { gsap } from 'gsap'
-const fldlsVideoSrc = '/assets/videos/compressPV/fuludelisi.mp4'
+const fldlsVideoSrc = '/videos/compressPV/fuludelisi.mp4'
 const bgRef = ref()
 const textRef = ref()
 const videoRef = ref()

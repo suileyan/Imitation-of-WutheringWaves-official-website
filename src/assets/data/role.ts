@@ -19,12 +19,12 @@ const sanhua_TC = new URL('@/assets/tachie/sanhua.webp', import.meta.url).href
 const shorekeeper_TC = new URL('@/assets/tachie/shorekeeper.png', import.meta.url).href
 const yuanwu_TC = new URL('@/assets/tachie/yuanwu.webp', import.meta.url).href
 //视频资源
-const chun_zh = '/assets/videos/compressPV/chun_zh.mp4?url'
-const dj_zh = '/assets/videos/compressPV/dj_zh.mp4?url'
-const ktll_zh = '/assets/videos/compressPV/ktll_zh.mp4?url'
-const qs_zh = '/assets/videos/compressPV/qs_zh.mp4?url'
-const sar_zh = '/assets/videos/compressPV/sar_zh.mp4?url'
-const sh_zh = '/assets/videos/compressPV/sh_zh.mp4?url'
+const chun_zh = '/videos/compressPV/chun_zh.mp4?url'
+const dj_zh = '/videos/compressPV/dj_zh.mp4?url'
+const ktll_zh = '/videos/compressPV/ktll_zh.mp4?url'
+const qs_zh = '/videos/compressPV/qs_zh.mp4?url'
+const sar_zh = '/videos/compressPV/sar_zh.mp4?url'
+const sh_zh = '/videos/compressPV/sh_zh.mp4?url'
 
 //音频资源
 const cantarella_zh = new URL('@/assets/mp3/cantarella.mp3', import.meta.url).href
