@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-const onePageBgMp4 = new URL('@/assets/video/one-swiper-bg-video.mp4', import.meta.url).href
+const onePageBgMp4 = '/assets/videos/one-swiper-bg-video.mp4'
 const onePageBgposter = new URL('@/assets/images/indexPage1/bg-poster.png', import.meta.url).href
 </script>
 

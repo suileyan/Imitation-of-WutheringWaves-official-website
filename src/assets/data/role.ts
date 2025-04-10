@@ -18,14 +18,13 @@ const qiushui_TC = new URL('@/assets/tachie/qiushui.png', import.meta.url).href
 const sanhua_TC = new URL('@/assets/tachie/sanhua.webp', import.meta.url).href
 const shorekeeper_TC = new URL('@/assets/tachie/shorekeeper.png', import.meta.url).href
 const yuanwu_TC = new URL('@/assets/tachie/yuanwu.webp', import.meta.url).href
-
 //视频资源
-import chun_zh from '@/assets/video/compressPV/chun_zh.mp4?url'
-import dj_zh from '@/assets/video/compressPV/dj_zh.mp4?url'
-import ktll_zh from '@/assets/video/compressPV/ktll_zh.mp4?url'
-import qs_zh from '@/assets/video/compressPV/qs_zh.mp4?url'
-import sar_zh from '@/assets/video/compressPV/sar_zh.mp4?url'
-import sh_zh from '@/assets/video/compressPV/sh_zh.mp4?url'
+const chun_zh = '/assets/videos/compressPV/chun_zh.mp4?url'
+const dj_zh = '/assets/videos/compressPV/dj_zh.mp4?url'
+const ktll_zh = '/assets/videos/compressPV/ktll_zh.mp4?url'
+const qs_zh = '/assets/videos/compressPV/qs_zh.mp4?url'
+const sar_zh = '/assets/videos/compressPV/sar_zh.mp4?url'
+const sh_zh = '/assets/videos/compressPV/sh_zh.mp4?url'
 
 //音频资源
 const cantarella_zh = new URL('@/assets/mp3/cantarella.mp3', import.meta.url).href
