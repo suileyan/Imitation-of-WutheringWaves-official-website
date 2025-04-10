@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-const onePageBgMp4 = 'https://vimeo.com/1074181873/b2903c9ac0'
+const onePageBgMp4 = new URL('@/assets/video/one-swiper-bg-video.mp4', import.meta.url).href
 const onePageBgposter = new URL('@/assets/images/indexPage1/bg-poster.png', import.meta.url).href
 </script>
 
