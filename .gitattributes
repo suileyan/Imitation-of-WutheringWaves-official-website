@@ -1,5 +1,4 @@
 * text=auto eol=lf
 src/assets/video/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
 dist/assets/*.mp4 filter=lfs diff=lfs merge=lfs -text
-*.mp4 filter=lfs diff=lfs merge=lfs -text
 dist/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
