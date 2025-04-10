@@ -7,14 +7,15 @@
       <div class="video-container absolute top-[47%] left-1/2">
         <video
           class="video-content"
-          :src="videoSrc || undefined"
           preload="metadata"
           autoplay
           loop
           playsinline
           muted
           v-show="isLoaded"
-        ></video>
+        >
+          <source :src="videoSrc || undefined" type="video/mp4" />
+        </video>
       </div>
     </div>
   </div>

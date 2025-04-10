@@ -1,14 +1,8 @@
 <template>
   <template v-if="onePageBgposter">
-    <video
-      :src="onePageBgMp4"
-      :poster="onePageBgposter"
-      autoplay
-      loop
-      muted
-      playsinline
-      class="background-video"
-    ></video>
+    <video :poster="onePageBgposter" autoplay loop muted playsinline class="background-video">
+      <source :src="onePageBgMp4" type="video/mp4" />
+    </video>
   </template>
   <div class="w-full bg-black absolute top-0 line-shadow"></div>
 </template>

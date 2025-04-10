@@ -8,7 +8,9 @@
       class="close absolute w-4 h-4 top-[25%] right-[20%] hover:cursor-pointer"
       @click="VideoController('pause')"
     ></div>
-    <video ref="CgVideo" class="w-1/2" :src="CgMP4" controls></video>
+    <video ref="CgVideo" class="w-1/2" controls>
+      <source :src="CgMP4" type="video/mp4" />
+    </video>
   </div>
 </template>
 
