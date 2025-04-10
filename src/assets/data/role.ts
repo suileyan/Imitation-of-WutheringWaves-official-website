@@ -20,12 +20,12 @@ const shorekeeper_TC = new URL('@/assets/tachie/shorekeeper.png', import.meta.ur
 const yuanwu_TC = new URL('@/assets/tachie/yuanwu.webp', import.meta.url).href
 
 //视频资源
-const chun_zh = new URL('@/assets/video/compressPV/chun_zh.mp4', import.meta.url).href
-const dj_zh = new URL('@/assets/video/compressPV/dj_zh.mp4', import.meta.url).href
-const ktll_zh = new URL('@/assets/video/compressPV/ktll_zh.mp4', import.meta.url).href
-const qs_zh = new URL('@/assets/video/compressPV/qs_zh.mp4', import.meta.url).href
-const sar_zh = new URL('@/assets/video/compressPV/sar_zh.mp4', import.meta.url).href
-const sh_zh = new URL('@/assets/video/compressPV/sh_zh.mp4', import.meta.url).href
+import chun_zh from '@/assets/video/compressPV/chun_zh.mp4?url'
+import dj_zh from '@/assets/video/compressPV/dj_zh.mp4?url'
+import ktll_zh from '@/assets/video/compressPV/ktll_zh.mp4?url'
+import qs_zh from '@/assets/video/compressPV/qs_zh.mp4?url'
+import sar_zh from '@/assets/video/compressPV/sar_zh.mp4?url'
+import sh_zh from '@/assets/video/compressPV/sh_zh.mp4?url'
 
 //音频资源
 const cantarella_zh = new URL('@/assets/mp3/cantarella.mp3', import.meta.url).href
