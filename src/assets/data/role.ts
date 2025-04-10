@@ -19,12 +19,18 @@ const sanhua_TC = new URL('@/assets/tachie/sanhua.webp', import.meta.url).href
 const shorekeeper_TC = new URL('@/assets/tachie/shorekeeper.png', import.meta.url).href
 const yuanwu_TC = new URL('@/assets/tachie/yuanwu.webp', import.meta.url).href
 //视频资源
-const chun_zh = '/videos/compressPV/chun_zh.mp4?url'
-const dj_zh = '/videos/compressPV/dj_zh.mp4?url'
-const ktll_zh = '/videos/compressPV/ktll_zh.mp4?url'
-const qs_zh = '/videos/compressPV/qs_zh.mp4?url'
-const sar_zh = '/videos/compressPV/sar_zh.mp4?url'
-const sh_zh = '/videos/compressPV/sh_zh.mp4?url'
+const chun_zh =
+  'https://suileyan.oss-cn-guangzhou.aliyuncs.com/chun_zh.mp4?Expires=1744300396&OSSAccessKeyId=TMP.3KokKtgt4Nhz7aQU9Qx4cgB9FWriF6fZndJzJvoRnCiGNhfdrLcw8saXthPPBwhh719mX5tBVSNEEeMHYkqeW59dSc3B4x&Signature=nFEBW8NPENLbDLWZhgpE94mRrGI%3D'
+const dj_zh =
+  'https://suileyan.oss-cn-guangzhou.aliyuncs.com/dj_zh.mp4?Expires=1744300410&OSSAccessKeyId=TMP.3KokKtgt4Nhz7aQU9Qx4cgB9FWriF6fZndJzJvoRnCiGNhfdrLcw8saXthPPBwhh719mX5tBVSNEEeMHYkqeW59dSc3B4x&Signature=nuAgGjBWRTLDejAXl9rnJx%2FEPW4%3D'
+const ktll_zh =
+  'https://suileyan.oss-cn-guangzhou.aliyuncs.com/ktll_zh.mp4?Expires=1744300425&OSSAccessKeyId=TMP.3KokKtgt4Nhz7aQU9Qx4cgB9FWriF6fZndJzJvoRnCiGNhfdrLcw8saXthPPBwhh719mX5tBVSNEEeMHYkqeW59dSc3B4x&Signature=jAbkWgZW9UCSr58sG6d6bcVNCFU%3D'
+const qs_zh =
+  'https://suileyan.oss-cn-guangzhou.aliyuncs.com/qs_zh.mp4?Expires=1744300440&OSSAccessKeyId=TMP.3KokKtgt4Nhz7aQU9Qx4cgB9FWriF6fZndJzJvoRnCiGNhfdrLcw8saXthPPBwhh719mX5tBVSNEEeMHYkqeW59dSc3B4x&Signature=72rirvHwmyd2SY%2Fyg1TdaJD%2F50M%3D'
+const sar_zh =
+  'https://suileyan.oss-cn-guangzhou.aliyuncs.com/sar_zh.mp4?Expires=1744300451&OSSAccessKeyId=TMP.3KokKtgt4Nhz7aQU9Qx4cgB9FWriF6fZndJzJvoRnCiGNhfdrLcw8saXthPPBwhh719mX5tBVSNEEeMHYkqeW59dSc3B4x&Signature=m9hEtedDORcZgfhEXfukj1Ubq34%3D'
+const sh_zh =
+  'https://suileyan.oss-cn-guangzhou.aliyuncs.com/sh_zh.mp4?Expires=1744300464&OSSAccessKeyId=TMP.3KokKtgt4Nhz7aQU9Qx4cgB9FWriF6fZndJzJvoRnCiGNhfdrLcw8saXthPPBwhh719mX5tBVSNEEeMHYkqeW59dSc3B4x&Signature=KK0Yp0W73Vhc7HdZpk9iGn0p0CA%3D'
 
 //音频资源
 const cantarella_zh = new URL('@/assets/mp3/cantarella.mp3', import.meta.url).href

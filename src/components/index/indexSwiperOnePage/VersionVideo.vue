@@ -17,7 +17,8 @@
 <script lang="ts" setup>
 import { ref, defineExpose } from 'vue'
 import { gsap } from 'gsap'
-const CgMP4 = '/videos/cg_zh.mp4'
+const CgMP4 =
+  'https://suileyan.oss-cn-guangzhou.aliyuncs.com/cg_zh.mp4?Expires=1744300347&OSSAccessKeyId=TMP.3KokKtgt4Nhz7aQU9Qx4cgB9FWriF6fZndJzJvoRnCiGNhfdrLcw8saXthPPBwhh719mX5tBVSNEEeMHYkqeW59dSc3B4x&Signature=%2FYeHkXTDeHXJ0uX3wdZluT2KBHw%3D'
 const CgVideo = ref<HTMLVideoElement | null>(null)
 const Mask = ref<HTMLVideoElement | null>(null)
 const VideoController = (control: string) => {
