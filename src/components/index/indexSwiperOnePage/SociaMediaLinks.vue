@@ -14,6 +14,12 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
+// 添加props声明
+defineProps<{
+  active?: boolean
+  loading?: boolean
+}>()
+
 const mediaData = ref([
   {
     link: 'https://www.kurobbs.com/mc/home/9',

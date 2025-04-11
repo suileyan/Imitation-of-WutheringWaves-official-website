@@ -1,11 +1,11 @@
 <!-- ParentComponent.vue -->
 <template>
-  <BackgroundVideo />
-  <TopBar ref="TopBarRef" />
-  <MainContent ref="MainContentRef" @play="playTheCgVideo" />
-  <AgeTip ref="AgeTipRef" />
-  <SocialMediaLinks ref="SocialMediaLinksRef" />
-  <VersionVideo ref="VersionVideoRef" />
+  <BackgroundVideo :active="active" :loading="loading" />
+  <TopBar ref="TopBarRef" :active="active" :loading="loading" />
+  <MainContent ref="MainContentRef" @play="playTheCgVideo" :active="active" :loading="loading" />
+  <AgeTip ref="AgeTipRef" :active="active" :loading="loading" />
+  <SocialMediaLinks ref="SocialMediaLinksRef" :active="active" :loading="loading" />
+  <VersionVideo ref="VersionVideoRef" :active="active" :loading="loading" />
 </template>
 
 <script lang="ts" setup>
@@ -17,6 +17,11 @@ import MainContent from '@/components/index/indexSwiperOnePage/MainContent.vue'
 import AgeTip from '@/components/index/indexSwiperOnePage/AgeTip.vue'
 import SocialMediaLinks from '@/components/index/indexSwiperOnePage/SociaMediaLinks.vue'
 import VersionVideo from '@/components/index/indexSwiperOnePage/VersionVideo.vue'
+
+defineProps<{
+  active?: boolean
+  loading?: boolean
+}>()
 
 const TopBarRef = ref<StarComponent | InstanceType<typeof TopBar> | null>(null)
 const MainContentRef = ref<InstanceType<typeof MainContent> | null>(null)

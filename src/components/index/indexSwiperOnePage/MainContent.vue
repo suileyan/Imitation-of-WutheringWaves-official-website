@@ -16,6 +16,12 @@ import TitleSection from './TitleSection.vue'
 import DownloadSection from './DownloadSection.vue'
 import type { StarComponent } from '@/types/types'
 
+// 添加props声明
+defineProps<{
+  active?: boolean
+  loading?: boolean
+}>()
+
 const emit = defineEmits(['play'])
 
 const MainContentRef = ref()

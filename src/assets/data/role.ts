@@ -19,12 +19,12 @@ const sanhua_TC = new URL('@/assets/tachie/sanhua.webp', import.meta.url).href
 const shorekeeper_TC = new URL('@/assets/tachie/shorekeeper.png', import.meta.url).href
 const yuanwu_TC = new URL('@/assets/tachie/yuanwu.webp', import.meta.url).href
 //视频资源
-const chun_zh = 'https://suileyan.oss-cn-guangzhou.aliyuncs.com/chun_zh.mp4'
-const dj_zh = 'https://suileyan.oss-cn-guangzhou.aliyuncs.com/dj_zh.mp4'
-const ktll_zh = 'https://suileyan.oss-cn-guangzhou.aliyuncs.com/ktll_zh.mp4'
-const qs_zh = 'https://suileyan.oss-cn-guangzhou.aliyuncs.com/qs_zh.mp4'
-const sar_zh = 'https://suileyan.oss-cn-guangzhou.aliyuncs.com/sar_zh.mp4'
-const sh_zh = 'https://suileyan.oss-cn-guangzhou.aliyuncs.com/sh_zh.mp4'
+const chun_zh = new URL('@/assets/video/compressPV/chun_zh.mp4', import.meta.url).href
+const dj_zh = new URL('@/assets/video/compressPV/dj_zh.mp4', import.meta.url).href
+const ktll_zh = new URL('@/assets/video/compressPV/ktll_zh.mp4', import.meta.url).href
+const qs_zh = new URL('@/assets/video/compressPV/qs_zh.mp4', import.meta.url).href
+const sar_zh = new URL('@/assets/video/compressPV/sar_zh.mp4', import.meta.url).href
+const sh_zh = new URL('@/assets/video/compressPV/sh_zh.mp4', import.meta.url).href
 
 //音频资源
 const cantarella_zh = new URL('@/assets/mp3/cantarella.mp3', import.meta.url).href

@@ -14,7 +14,7 @@
 import videoPlayer from '@/components/index/indexSwiperTwoPage/videoPlayer.vue'
 import { ref, defineExpose } from 'vue'
 import { gsap } from 'gsap'
-const fldlsVideoSrc = 'https://suileyan.oss-cn-guangzhou.aliyuncs.com/fuludelisi.mp4'
+const fldlsVideoSrc = new URL('@/assets/video/compressPV/fuludelisi.mp4', import.meta.url).href
 const bgRef = ref()
 const textRef = ref()
 const videoRef = ref()

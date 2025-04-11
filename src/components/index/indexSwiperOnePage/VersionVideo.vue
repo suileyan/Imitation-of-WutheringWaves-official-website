@@ -17,7 +17,14 @@
 <script lang="ts" setup>
 import { ref, defineExpose } from 'vue'
 import { gsap } from 'gsap'
-const CgMP4 = 'https://suileyan.oss-cn-guangzhou.aliyuncs.com/cg_zh.mp4'
+
+// 添加props声明
+defineProps<{
+  active?: boolean
+  loading?: boolean
+}>()
+
+const CgMP4 = new URL('@/assets/video/cg_zh.mp4', import.meta.url).href
 const CgVideo = ref<HTMLVideoElement | null>(null)
 const Mask = ref<HTMLVideoElement | null>(null)
 const VideoController = (control: string) => {

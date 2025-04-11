@@ -1,23 +1,24 @@
 <template>
   <Title ref="titleRef" />
+  <div class="camp absolute w-85 top-25 left-30 z-6" ref="campRef">
+    <template v-if="totalPages[currentPage].details.camp === '黎那汐塔'">
+      <img src="@/assets/images/camp/linaxita.png" alt="黎那汐塔" />
+    </template>
+    <template v-else-if="totalPages[currentPage].details.camp === '黑海岸'">
+      <img src="@/assets/images/camp/hha.png" alt="黑海岸" />
+    </template>
+    <template v-else-if="totalPages[currentPage].details.camp === '瑝珑'">
+      <img src="@/assets/images/camp/hl.png" alt="瑝珑" />
+    </template>
+  </div>
 
   <div class="relative w-full h-full overflow-hidden">
     <div
-      class="absolute w-full h-full flex items-center justify-center min-w-[1024px] z-4 transition-opacity duration-1000"
+      class="absolute w-full h-full flex items-center justify-center min-w-[1024px] z-4 transition-opacity"
+      :style="`transition-duration: ${transitionTime}ms`"
       :class="{ 'opacity-0': isTransitioning, 'opacity-100': !isTransitioning }"
     >
       <!-- 阵营图片 -->
-      <div class="camp absolute w-85 top-25 left-30 opacity-60" ref="campRef">
-        <template v-if="totalPages[currentPage].details.camp === '黎那汐塔'">
-          <img src="@/assets/images/camp/linaxita.png" alt="黎那汐塔" />
-        </template>
-        <template v-else-if="totalPages[currentPage].details.camp === '黑海岸'">
-          <img src="@/assets/images/camp/hha.png" alt="黑海岸" />
-        </template>
-        <template v-else-if="totalPages[currentPage].details.camp === '瑝珑'">
-          <img src="@/assets/images/camp/hl.png" alt="瑝珑" />
-        </template>
-      </div>
 
       <!-- 角色详情 -->
       <role-details
@@ -55,6 +56,39 @@ import { totalPages } from '@/assets/data/role'
 import RoleDetails from './indexSwiperTwoPage/roleDetails.vue'
 import CustomPagination from './indexSwiperTwoPage/CustomPagination.vue'
 
+// 过渡时间配置，单位ms
+const transitionTime = ref(1000)
+const audioStopDelay = ref(50)
+
+// 切换页面时的更新函数
+const update = (bool: boolean) => {
+  if (bool) {
+    if (campRef.value) {
+      gsap.to(campRef.value, {
+        opacity: 1,
+        top: '50%',
+        left: '50%',
+        scale: 1.5,
+        transform: 'translate(-50%,-50%)',
+        duration: 1,
+        ease: 'power2.inOut',
+      })
+    }
+  } else {
+    if (campRef.value) {
+      gsap.to(campRef.value, {
+        opacity: 1,
+        top: '6.25rem',
+        left: '7.5rem',
+        scale: 1,
+        transform: 'translate(0,0)',
+        duration: 1,
+        ease: 'power2.inOut',
+      })
+    }
+  }
+}
+
 const currentPage = ref(0)
 const isInitialized = ref(false)
 const currentAudio = ref<HTMLAudioElement | null>(null)
@@ -65,6 +99,12 @@ const campRef = ref()
 const roleDetailsRef = ref()
 const paginationRef = ref()
 const titleRef = ref()
+
+// 添加props声明
+defineProps<{
+  active?: boolean
+  loading?: boolean
+}>()
 
 const star = () => {
   roleDetailsRef.value?.star()
@@ -127,14 +167,16 @@ const stopAudio = () => {
 const goToPage = (index: number) => {
   if (index === currentPage.value) return
   isTransitioning.value = true
+  update(true)
   setTimeout(() => {
     currentPage.value = index
     isTransitioning.value = false
-  }, 500)
+    update(false)
+  }, transitionTime.value)
 
   setTimeout(() => {
     stopAudio()
-  }, 50)
+  }, audioStopDelay.value)
 }
 
 const prevPage = () => {
@@ -142,14 +184,16 @@ const prevPage = () => {
     const newIndex = currentPage.value - 1
     if (newIndex === currentPage.value) return
     isTransitioning.value = true
+    update(true)
     setTimeout(() => {
       currentPage.value = newIndex
       isTransitioning.value = false
-    }, 500)
+      update(false)
+    }, transitionTime.value)
 
     setTimeout(() => {
       stopAudio()
-    }, 50)
+    }, audioStopDelay.value)
   }
 }
 
@@ -158,14 +202,16 @@ const nextPage = () => {
     const newIndex = currentPage.value + 1
     if (newIndex === currentPage.value) return
     isTransitioning.value = true
+    update(true)
     setTimeout(() => {
       currentPage.value = newIndex
       isTransitioning.value = false
-    }, 500)
+      update(false)
+    }, transitionTime.value)
 
     setTimeout(() => {
       stopAudio()
-    }, 50)
+    }, audioStopDelay.value)
   }
 }
 </script>

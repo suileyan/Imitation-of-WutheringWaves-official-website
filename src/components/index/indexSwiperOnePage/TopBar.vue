@@ -16,6 +16,12 @@ import { useCounterStore } from '@/stores/counter'
 import { ref } from 'vue'
 import { gsap } from 'gsap'
 
+// 添加props声明
+defineProps<{
+  active?: boolean
+  loading?: boolean
+}>()
+
 const counter = useCounterStore()
 
 const logoRef = ref()
